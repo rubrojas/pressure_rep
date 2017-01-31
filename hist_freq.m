@@ -6,6 +6,7 @@ for i=1:1
         edges = linspace(0,max(A),max(A)*501);
         %edges = 0:0.01:max(A);
         
+        
         [N ,edges, bin] = histcounts(A, edges);
         
         [N_ord, I] = sort(N,'descend');
