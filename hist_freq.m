@@ -2,7 +2,8 @@
 
 for i=1:1
     for j=1:1
-        %A = f_names(i,j);
+        
+        A = f_names(i,j);
         edges = linspace(0,max(A),max(A)*501);
         %edges = 0:0.01:max(A);
         
@@ -11,8 +12,6 @@ for i=1:1
         
         [N_ord, I] = sort(N,'descend');
         
-        
-     
         for k = 1:length(edges)-1
             centers(k) = (edges(k) + edges(k+1))/2;
         end
