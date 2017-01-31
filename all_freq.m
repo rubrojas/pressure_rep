@@ -25,7 +25,7 @@ for i = 1:7
         end
         
         all_freq_array{i,j} = value; 
-        [i j], value
+        [i j], value;
     end
 end
 
