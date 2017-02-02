@@ -11,7 +11,7 @@ for i=1:1
         [N ,edges, bin] = histcounts(A, edges);
         
         [N_ord, I] = sort(N,'descend');
-        
+        p
         for k = 1:length(edges)-1
             centers(k) = (edges(k) + edges(k+1))/2;
         end

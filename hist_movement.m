@@ -16,8 +16,10 @@ for i = 1:7
             for k2 = 1:length(edges)-1
                 centers(k2) = (edges(k2) + edges(k2+1))/2;
             end
-
-            hh = N_ord > 1;
+            
+            threshold = 3;
+            
+            hh = N_ord > threshold;
             centers_ord = centers(I);
             value_H = [N_ord(hh).', centers_ord(hh).'];
             
@@ -28,4 +30,4 @@ for i = 1:7
     end
 end
 
-clearvars k2 A centers H_value I freq amp k x value_H i j a current_name_H hh N_ord centers_ord N edges bin
+clearvars threshold k2 A centers H_value I freq amp k x value_H i j a current_name_H hh N_ord centers_ord N edges bin
