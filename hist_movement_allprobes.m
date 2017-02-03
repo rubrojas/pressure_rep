@@ -16,14 +16,16 @@ for i = 1:7
             for k2 = 1:length(edges)-1
                 centers(k2) = (edges(k2) + edges(k2+1))/2;
             end
-
-            hh = N_ord > 1;
-            centers_ord = centers(I);
-            value_H = [N_ord(hh).', centers_ord(hh).'];
             
-         
+            centers_ord = centers(I).*2/i;
             
-        
+            ff = centers_ord < 0.5 & centers_ord> 0.001 ; 
+            N_ord = N_ord(ff);
+            centers_ord = centers_ord(ff);
+            
+            hh = N_ord > 3 ;
+            value_H = [N_ord(hh).', (centers_ord(hh)).'];
+  
         
         H_array_allprobes{i,j} = value_H;
     end
