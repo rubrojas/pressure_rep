@@ -2,6 +2,7 @@
 function [freqs, amps] = find_freq(data, probe, l)
 rate = 0.5 * l;
 
+
 k = probe;
 
 pxx  = pwelch(data(:,k),16385);
