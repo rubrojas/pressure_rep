@@ -16,9 +16,9 @@ for j = 6
         
             for f=1:ff
                 if mod(all_freq_array{i,j}{k,1}(f,3),1) == 0
-                    stem3(all_freq_array{i,j}{k,1}(f,3), k_vec(f) ,all_freq_array{i,k}{k,1}(f,4), 'r', 'filled');%this one is for artur's freq analysis of just the freq, no histogram
+                    stem3(all_freq_array{i,j}{k,1}(f,3), k_vec(f) ,all_freq_array{i,j}{k,1}(f,4), 'r', 'filled');%this one is for artur's freq analysis of just the freq, no histogram
                 else
-                    stem3(all_freq_array{i,j}{k,1}(f,3), k_vec(f) ,all_freq_array{i,k}{k,1}(f,4), 'k', 'filled');
+                    stem3(all_freq_array{i,j}{k,1}(f,3), k_vec(f) ,all_freq_array{i,j}{k,1}(f,4), 'k', 'filled');
                
                 end
                 hold on
