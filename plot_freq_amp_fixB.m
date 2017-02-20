@@ -1,10 +1,10 @@
 %This is a modified code to plot the normalized pure spectrum
 B_list = { '0', '20', '40', '80', '160', '270', '300'};
 
-ff = 50; %Number of maximums ploted per probe, per condition
-k = 3; %probe
+%ff = 10; %Number of maximums ploted per probe, per condition
+k = 1; %probe
 
-for j = 6
+for j = 4
     
     figure;
     
@@ -12,6 +12,8 @@ for j = 6
         
         a = char(B_list(j));
         B = eval(a);
+        
+        ff = length(all_freq_array{i,j}{k,1}(:,3));
         k_vec = ones(1, ff).*i/2;
         
             for f=1:ff

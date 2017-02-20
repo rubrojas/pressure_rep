@@ -43,7 +43,7 @@ lpxx = 10*log10(pxx);
 means = std(lpxx);
 %mean = 10*rate/3.5;
 
-[pks, locs] = findpeaks(lpxx, 128, 'MinPeakHeight', means, 'MinPeakProminence', 4*rate + means);
+[pks, locs] = findpeaks(lpxx, 128, 'MinPeakHeight', means, 'MinPeakProminence', 4*rate + means+3);
 
 %xx = locs < 10;
 freqs=locs;

@@ -28,6 +28,7 @@ for i = 1:7
             %setting k'th cell of value as a set of arrays
             value{k,1} = [freq, amp, freq.*2/i, amp2];
 
+            
             %value{k,1} = [freq, amp, mod(freq,i/2), mod(abs(i/2-mod(freq,i/2)),i/2)];
             
         end

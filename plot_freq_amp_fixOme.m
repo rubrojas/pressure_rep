@@ -2,7 +2,7 @@
 
 B_list = { '0', '20', '40', '80', '160', '270', '300'};
 
-ff = 10; %Number of maximums ploted per probe, per condition
+%ff = 10; %Number of maximums ploted per probe, per condition
 k = 1; %probe
 
 for i = 5
@@ -14,7 +14,8 @@ for i = 5
         B = eval(a);
         
         
-       
+        ff = length(all_freq_array{i,j}{k,1}(:,3));
+
         %k_vec = ones(1, ff).*i/2;
         %k_vec = ones(1, length(H_array_allprobes{i,k}(:,2))).*k/2;
         %scatter(Bvec,H_array_allprobes{i,k}(:,2),H_array_allprobes{i,k}(:,1).*5, 'k');
