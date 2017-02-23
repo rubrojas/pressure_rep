@@ -2,11 +2,12 @@
 
 B_list = { '0', '20', '40', '80', '160', '270', '300'};
 
-ff = 10; %Number of maximums ploted per probe, per condition
+
 k = 1; %probe
 
 for i = 1
     figure;
+    ff = 20; %Number of maximums ploted per probe, per condition
     
     for j=1:7
         
@@ -22,10 +23,18 @@ for i = 1
         %'k'); % comment this one for original histogram plots 
         Bvec = ones(1,ff).*B;
         %k_vec = ones(1, ff).*i/2;
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
         
         
         %3D STEMP PLOT OF THE NORMALIZE BUT NOT MODULATED FREQUENCIES 
         
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 %         for f=1:ff
 %         if mod(all_freq_array{i,j}{k,1}(f,3),1) == 0
 %             stem3(all_freq_array{i,j}{k,1}(f,3), Bvec(f) ,all_freq_array{i,j}{k,1}(f,4), 'r', 'filled');%this one is for artur's freq analysis of just the freq, no histogram
@@ -33,6 +42,7 @@ for i = 1
 %             stem3(all_freq_array{i,j}{k,1}(f,3), Bvec(f) ,all_freq_array{i,j}{k,1}(f,4), 'k', 'filled');
 %         end
 %          hold on
+<<<<<<< HEAD
 %         end
          
         %ANOTHER TIPE OF PLOT - COLOR SCALE ON TOP 
@@ -48,13 +58,60 @@ for i = 1
        %----------------------------------------------------------------------------------------
         
         
+=======
+
+%          end
+         
+       
+       
+
+>>>>>>> master
         
+         
+        %ANOTHER TIPE OF PLOT - COLOR SCALE ON TOP 
+      color_list = {'0   , 0.4470 ,   0.7410',  '0.8500  ,  0.3250  ,  0.0980','0.9290  ,  0.6940  ,  0.1250', '0.4940 ,   0.1840   , 0.5560', '0.4660  ,  0.6740   , 0.1880','0.3010 ,   0.7450 ,   0.9330', '0.6350   , 0.0780 ,   0.1840'};
+       b = char(color_list(j));
+      % c = eval(b);
+      
         
+        stem(all_freq_array{i,j}{k,1}(1:ff,3),all_freq_array{i,j}{k,1}(1:ff,4),'filled','color', (b));%this one is for artur's freq analysis of just the freq, no histogram
         
+<<<<<<< HEAD
        % B = B*2;
         
     end
     %TITLE AND THINGS FOR COLOR PLOTS
+=======
+       
+        hold on
+%     
+            
+        
+        
+       %----------------------------------------------------------------------------------------
+        
+    end   
+
+    
+%     %TITLE AND THINGS FOR COLOR PLOTS
+%     title(['\Omega_o = ',num2str(i/2), ' Hz']);
+%     ylabel('rel. amp.');
+%     xlabel('f/f_0');
+%     legend('0', '20', '40', '80','160','270','00');
+%    
+%     %legend([stem(all_freq_array{i,1}{k,1}(f,3),all_freq_array{i,1}{k,1}(f,4),'filled','color', (b)),stem(all_freq_array{i,2}{k,1}(f,3),all_freq_array{i,2}{k,1}(f,4),'filled','color', (b)),stem(all_freq_array{i,3}{k,1}(f,3),all_freq_array{i,3}{k,1}(f,4),'filled','color', (b)),stem(all_freq_array{i,4}{k,1}(f,3),all_freq_array{i,4}{k,1}(f,4),'filled','color', (b)),stem(all_freq_array{i,5}{k,1}(f,3),all_freq_array{i,5}{k,1}(f,4),'filled','color', (b)),stem(all_freq_array{i,6}{k,1}(f,3),all_freq_array{i,6}{k,1}(f,4),'filled','color', (b)),stem(all_freq_array{i,7}{k,1}(f,3),all_freq_array{i,7}{k,1}(f,4),'filled','color', (b))],'0', '20', '40', '80','160','270','00');
+%         
+%    % axis([-10 310 0 0.51]);
+%     grid on
+%     grid minor
+%      hold off
+%-----------------------------
+     
+     
+     
+%TITLE AND THINGS FOR STEM3 PLOTS
+
+
     title(['\Omega_o = ',num2str(i/2), ' Hz']);
     ylabel('rel. amp.');
     xlabel('f/f_0');
@@ -63,18 +120,8 @@ for i = 1
     grid on
     grid minor
      hold off
-%-----------------------------
-     
-     
-     
-%TITLE AND THINGS FOR STEM3 PLOTS
-%     title(['\Omega_o = ',num2str(i/2), ' Hz']);
-%     ylabel('I in coils (Amp)')
-%     xlabel('f/f_0')
-%    % axis([-10 310 0 0.51]);
-%     grid on
-%     grid minor
-%      hold off
+
 %--------------------------------------------------     
+
 end
 clearvars B k Bvec i B_list a b c B_list color color_list f ff j k 
