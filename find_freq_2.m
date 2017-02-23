@@ -1,5 +1,5 @@
 
-function [freqs, amps, amps2] = find_freq(data, probe, l)
+function [freqs, amps, amps2] = find_freq_2(data, probe, l)
 rate = 0.5 * l;
 
 k = probe;
@@ -43,7 +43,7 @@ lpxx = 10*log10(pxx);
 means = std(lpxx);
 %mean = 10*rate/3.5;
 
-[pks, locs] = findpeaks(lpxx, 128, 'MinPeakHeight', means, 'MinPeakProminence', 4*rate + means);
+[pks, locs] = findpeaks(lpxx, 128, 'MinPeakHeight', means+2, 'MinPeakProminence', 4*rate+2+ means);
 
 %xx = locs < 10;
 freqs=locs;
